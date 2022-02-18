@@ -1,12 +1,17 @@
 # log-analysis
 
 The repository is divided into two parts:
-- Processing the logs and aggregating the information (Generate_General_Logs.py)
-- Load the data and generate an analysis (Data_Analitics.py)
+- Script to process the logs (Apache Common Log Format and Apache Log4j) and aggregate the information --> Generate_General_Logs.py;
+- Script to load the data and generate graphics --> Data_Analitics.py;
 
 ## Scripts
+```
+python Generate_General_Logs.py
+```
 
-
+```
+python Data_Analitics.py
+```
 
 ## Additional Information
 This repository contains external datasets and papers that may be useful for future analysis.
