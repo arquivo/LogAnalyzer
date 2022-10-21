@@ -14,7 +14,7 @@ python Data_Analitics.py
 ```
 
 ## Additional Information
-This repository contains external datasets and papers that may be useful for future analysis.
+This repository contains external datasets (util folder) and papers that may be useful for future analysis.
 
 Due to the large volume of information, these folders are stored internally (Paris\AWP\Maintenance and Operations\Log Analysis Metrics).
 
