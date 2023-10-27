@@ -45,6 +45,10 @@ Get stats for April 2023: (do this inside a screen!)
 ./get-monthly-stats.sh 2023 04
 ```
 
+Get Arquivo404 stats for January 2023 based on awstat logs: (requires aggregate_waybacks.awk)
+```
+./analyze404logs.sh /data/logs/awstats_results/arquivo.pt_apache/awstats012023.arquivo.pt.txt
+```
 ## Additional Information
 This repository contains external datasets (util folder) and papers that may be useful for future analysis.
 
