@@ -65,14 +65,14 @@ do
 done
 
 echo "------ Total Distinct Clients in $YEAR: ------"
-echo -e "Arquivo.pt API      $(cat ./*.clients.apt.log | sort | uniq | wc -l)"
-echo -e "ImageSearch API     $(cat ./*.clients.im.log | sort | uniq | wc -l)"
-echo -e "CDX API             $(cat ./*.clients.cdx.log | sort | uniq | wc -l)"
-echo -e "Memento API         $(cat ./*.clients.mem.log | sort | uniq | wc -l)"
-echo -e "SavePageNow entry   $(cat ./*.clients.spn.log | sort | uniq | wc -l)"
-echo -e "SavePageNow record  $(cat ./*.clients.spnr.log | sort | uniq | wc -l)"
-echo -e "CompletePage        $(cat ./*.clients.cp.log | sort | uniq | wc -l)"
-echo -e "Arquivo404          $(cat ./*.clients.a404.log | sort | uniq | wc -l)"
+echo -e "Arquivo.pt API         $(cat ./*.clients.apt.log | sort | uniq | wc -l)"
+echo -e "ImageSearch API        $(cat ./*.clients.im.log | sort | uniq | wc -l)"
+echo -e "CDX API                $(cat ./*.clients.cdx.log | sort | uniq | wc -l)"
+echo -e "Memento API            $(cat ./*.clients.mem.log | sort | uniq | wc -l)"
+echo -e "ArchivePageNow entry   $(cat ./*.clients.spn.log | sort | uniq | wc -l)"
+echo -e "ArchivePageNow record  $(cat ./*.clients.spnr.log | sort | uniq | wc -l)"
+echo -e "CompletePage           $(cat ./*.clients.cp.log | sort | uniq | wc -l)"
+echo -e "Arquivo404             $(cat ./*.clients.a404.log | sort | uniq | wc -l)"
 
 rm -f ./*.log
 cd ..
