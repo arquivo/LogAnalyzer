@@ -130,25 +130,24 @@ MEM_CLIENTS=$( cat "$YEAR-$MONTH.clients.mem.log" | wc -l)
 
 echo -e "Memento API\t $MEM_ALL_REQUESTS \t $MEM_FIL_REQUESTS \t $MEM_CLIENTS"
 
-#SavePageNow
+#ArchivePageNow
 #SPN_REQUESTS=$(grep -aE 'POST /services/savepagenow' $LOGFILE | grep 'success=true' | wc -l)
-#grep -aE 'POST /services/savepagenow' $LOGFILE | grep -v 'success=true' | grep -vE '^193\.136' | cut -d ' ' -f 1 | sort | uniq > "$YEAR-$MONTH.clients.spn.log"
+#grep -aE 'POST /services/savepagenow' $LOGFILE | grep -v 'success=true' | grep -vE '^193\.136' | cut -d ' ' -f 1 | sort | uniq > "$YEAR-$MONTH.                                                                                             clients.spn.log"
 #SPN_CLIENTS=$(cat "$YEAR-$MONTH.clients.spn.log" | wc -l)
-SPN_ALL_REQUESTS=$(grep -a 'GET /services/savepagenow' $LOGFILE | wc -l)
-SPN_FIL_REQUESTS=$(grep -a 'GET /services/savepagenow' $LOGFILE | cut -d ' ' -f 1 | grep -vEa "$FILTER" | wc -l)
+SPN_ALL_REQUESTS=$(grep -aE 'GET /services/(save|archive)pagenow' $LOGFILE | wc -l)
+SPN_FIL_REQUESTS=$(grep -aE 'GET /services/(save|archive)pagenow' $LOGFILE | cut -d ' ' -f 1 | grep -vEa "$FILTER" | wc -l)
 grep -a 'GET /services/savepagenow' $LOGFILE | cut -d ' ' -f 1 | sort | uniq > "$YEAR-$MONTH.clients.spn.log"
 SPN_CLIENTS=$( cat "$YEAR-$MONTH.clients.spn.log" | wc -l)
 
 echo -e "SavePageNow entry \t $SPN_ALL_REQUESTS \t $SPN_FIL_REQUESTS \t $SPN_CLIENTS"
 
-#SavePageNow Recording
+#ArchivePageNow Recording
 SPNR_ALL_REQUESTS=$(grep -a 'GET /save/now/record' $LOGFILE | wc -l)
 SPNR_FIL_REQUESTS=$(grep -a 'GET /save/now/record' $LOGFILE | cut -d ' ' -f 1 | grep -vEa "$FILTER" | wc -l)
 grep -a 'GET /save/now/record' $LOGFILE | cut -d ' ' -f 1 | sort | uniq > "$YEAR-$MONTH.clients.spnr.log"
 SPNR_CLIENTS=$( cat "$YEAR-$MONTH.clients.spnr.log" | wc -l)
 
 echo -e "SavePageNow record \t $SPNR_ALL_REQUESTS \t $SPNR_FIL_REQUESTS \t $SPNR_CLIENTS"
-
 
 #CompletePage
 CP_ALL_REQUESTS=$(grep -a 'GET /services/complete' $LOGFILE | wc -l)
